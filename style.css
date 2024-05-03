@@ -1,0 +1,444 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+body {
+    background: linear-gradient(180deg, #81D0FF, #A4FFC8);
+    background-attachment: fixed;
+}
+
+
+.noTounch {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-drag: none;
+}
+
+.container {
+    height: 98vh;
+    margin: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    grid-template-rows: 1fr;
+}
+
+@media (max-width: 1250px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .info {
+        height: 100%;
+        width: 450px;
+    }
+}
+
+.content {
+    background: linear-gradient(180deg, rgba(18, 17, 31, 0.4) 0%, rgba(12, 25, 32, 0.4) 100%);
+    border-radius: 10px;
+}
+
+.info {
+    background: #af41b9;
+    border-radius: 10px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 0.5fr;
+
+}
+
+header {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    /*alinea horizontalmente al centro headerDiscordUserPhoto y headerDiscordUserDecoration*/
+    align-items: center;
+
+    margin: 10px 10px 0 10px;
+    grid-template-areas:
+        "profile textbox";
+
+}
+
+.headerDiscordUserPhoto {
+    height: 115px;
+    border-radius: 50%;
+    grid-area: profile;
+}
+
+.headerDiscordUserDecoration {
+    height: 140px;
+    grid-area: profile;
+}
+
+.headerUserMessage {
+    background: linear-gradient(90deg, rgba(24, 29, 46, 0.5) 0%, rgba(17, 37, 48, 0.5) 100%);
+    padding: 30px 20px 30px 20px;
+    border-radius: 10px;
+    grid-area: textbox;
+}
+
+.headerUserMessage>h1 {
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+.galery {
+    height: fit-content;
+    margin: 0 auto;
+    padding: 0 40px 0 40px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr;
+    grid-template-areas:
+        "femboy chicaLoca gire"
+        "elfa pareja18 gire"
+    ;
+    justify-items: center;
+    align-items: center;
+}
+
+.galery>img {
+    width: 220px;
+}
+
+.chicaLoca {
+    grid-area: chicaLoca;
+}
+
+.femboy {
+    grid-area: femboy;
+}
+
+.elfa {
+    grid-area: elfa;
+}
+
+.pareja18 {
+    grid-area: pareja18;
+}
+
+.gire {
+    grid-area: gire;
+}
+
+footer {
+    text-align: center;
+}
+
+footer>h3 {
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    display: inline;
+    background: linear-gradient(90deg, rgba(24, 29, 46, 0.5) 0%, rgba(17, 37, 48, 0.5) 100%);
+}
+
+footer>p {
+    margin-top: 12px;
+}
+
+
+
+
+.info {
+    background: linear-gradient(180deg, #FCF839 0%, #8500F9 100%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "userTraget"
+    ;
+}
+
+.userTraget {
+    height: 98%;
+    border-radius: 10px;
+    grid-area: userTraget;
+    margin: 8px 6px 8px 6px;
+    background: #ffffff8c;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.1fr 4fr;
+
+    grid-template-areas:
+        "banner"
+        "midle"
+        "userContentInfo"
+    ;
+
+}
+
+.banner {
+    height: fit-content;
+    grid-area: banner;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.midle {
+    width: fit-content;
+    grid-area: banner;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 60px;
+    left: 30px;
+}
+
+.userProfileImage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        "profile"
+    ;
+}
+
+.userProfileImage img {
+    grid-area: profile;
+}
+
+.profileImage {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profileDecoration {
+    width: 120px;
+}
+
+.badges {
+    grid-area: midle;
+}
+
+.userContentInfo {
+    grid-area: userContentInfo;
+}
+
+.badges {
+    display: flex;
+    justify-content: end;
+    margin: 10px 10px 0 10px;
+}
+
+.badgesImages {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+
+    border-radius: 10px;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.badgesImages img {
+
+    width: 30px;
+    height: 30px;
+}
+
+.userContentInfo {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 15px 10px 15px 10px;
+    padding: 10px;
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.5fr 0.2fr;
+}
+
+.userInfoTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr;
+    grid-template-areas:
+        "userInfo userButton"
+        "hr hr"
+    ;
+}
+
+.userInfoTop * {
+    color: black;
+}
+
+.userInfo {
+    grid-area: userInfo;
+}
+
+.userInfo :first-child {
+    font-weight: 500;
+}
+
+.userInfo :nth-child(2) {
+    font-size: 13px;
+}
+
+.userInfo img {
+    margin-top: 20px;
+    width: 70px;
+}
+
+.userButton {
+    display: grid;
+    justify-items: end;
+    height: fit-content;
+    grid-area: userButton;
+}
+
+.addUser {
+    padding: 8px 14px 8px 14px;
+    background: #248046;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+hr {
+    grid-area: hr;
+    margin-top: 20px;
+    border-top: 0px double #ff6550;
+    border-right: 0px double #ff6550;
+    border-bottom: 1px double rgba(150, 150, 150, 0.473);
+    border-left: 0px double #ff6550;
+}
+
+.addUser:hover {
+    cursor: pointer;
+}
+
+.addUser:active {
+    background: #14582d;
+}
+
+.userDescription * {
+    color: #3d3e42;
+}
+
+.transFlag {
+    width: 25px;
+    height: fit-content;
+    position: relative;
+    top: 32px;
+    right: -80px;
+}
+
+.yarn {
+    width: 25px;
+    height: fit-content;
+    position: relative;
+    top: 76px;
+    right: 0px;
+}
+
+.userDescription h3 {
+    font-size: 14px;
+    color: black;
+}
+
+
+.userActivity>h3 {
+    font-size: 14px;
+    color: black;
+}
+
+
+.server {
+    padding: 7px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: auto auto;
+    background: #2B2D31;
+    grid-template-areas:
+        "logoServer serverTitle serverTitle ."
+        "logoServer userServer userServer serverJoin"
+    ;
+}
+
+.logoServer {
+    grid-area: logoServer;
+    background: rgb(31, 31, 31);
+    width: 80px;
+    border: 5px solid palevioletred;
+}
+
+.serverTitle {
+    grid-area: serverTitle;
+    text-align: center;
+    font-size: 19px;
+}
+
+.comunity {
+    grid-area: serverTitle;
+    height: 19px;
+    position: relative;
+    top: 6px;
+    right: -200px;
+}
+
+.userServer {
+    grid-area: userServer;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    height: fit-content;
+}
+.userServer > p{
+    display: inline;
+    font-size: 13px;
+}
+
+.serverJoin{
+    height: fit-content;
+    grid-area: serverJoin;
+    padding: 8px 20px 8px 20px;
+    background: #248046;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.userSocialMedia{
+    margin: 0 auto;
+}
+
+.media{
+    height: 70px;
+    
+}
+.frame {
+    grid-area: userTraget;
+}
